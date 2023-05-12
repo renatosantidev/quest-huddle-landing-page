@@ -1,0 +1,145 @@
+html{
+    font-size: 62,5%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.fundo{
+    background: hsl(257, 40%, 49%) url(../images/bg-desktop.svg) center no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+        "logo logo"
+        "ilustration hero"
+        "footer footer";
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+}
+
+.fundo .logo{
+    grid-area: logo;
+    padding: 15px 0 50px 15px;
+}
+
+.fundo .illustration{
+    grid-area: ilustration;
+    padding: 0 20px;
+}
+
+.fundo .hero{
+    grid-area: hero;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.fundo .hero .title{
+    font-weight: 600;
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+
+.fundo .hero .description{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 30px;
+    word-spacing: 2px;
+    padding-bottom: 40px;
+}
+
+.fundo .hero .register{
+    font-size: 1.4rem;
+    color: hsl(257, 40%, 49%);
+    background-color: #fff;
+    padding: 10px 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.fundo .hero .register:hover{
+    color: #fff;
+    background-color: hsl(300, 69%, 71%);
+}
+
+.fundo .footer{
+    grid-area: footer;
+    display: flex;
+
+    padding-right: 25px;
+}
+
+.fundo .footer .link-base{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.fundo .footer .link-base .links{
+    height: 40px;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 100px;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+.fundo .footer .link-base .links:hover{
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+}
+
+.fundo .footer .link-base .links a{
+    color:#fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.fundo .footer .link-base .links a:hover{
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 475px){
+
+    .fundo{
+        background-image: url(../images/bg-mobile.svg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fundo .logo{
+        grid-area: logo;
+        padding: 15px 0 50px 0px;
+    }
+
+    .fundo .illustration img{
+        max-width: 340px;
+    }
+
+    .fundo .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .fundo .hero .title{
+        font-size: 2.5rem;
+    }
+
+    .fundo .hero .register{
+        padding: 10px 100px;
+    }
+
+}
